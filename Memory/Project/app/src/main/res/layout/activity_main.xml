@@ -9,8 +9,41 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context="code.jjlm.memory.MainActivity">
 
-    <TextView
+    <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Hello World!" />
+        android:text="Time Attack"
+        android:id="@+id/button_sp"
+        android:layout_marginTop="121dp"
+        android:layout_below="@+id/imageView"
+        android:layout_centerHorizontal="true"
+        android:paddingLeft="50dp"
+        android:paddingRight="50dp" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Versus"
+        android:id="@+id/button_mp"
+        android:layout_below="@+id/button_sp"
+        android:layout_alignStart="@+id/button_sp"
+        android:layout_alignEnd="@+id/button_sp" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Edit Sets"
+        android:id="@+id/button_sets"
+        android:layout_below="@+id/button_mp"
+        android:layout_alignStart="@+id/button_mp"
+        android:layout_alignEnd="@+id/button_mp" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/imageView"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true"
+        android:paddingBottom="100dp" />
 </RelativeLayout>

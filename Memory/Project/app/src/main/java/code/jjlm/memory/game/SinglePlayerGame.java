@@ -1,0 +1,26 @@
+package code.jjlm.memory.game;
+
+/**
+ * Created by Jens on 21.06.2016.
+ */
+public class SinglePlayerGame extends Game {
+
+    public SinglePlayerGame(Set set) {
+        super(set);
+    }
+
+    @Override
+    protected void startGame() {
+
+    }
+
+    @Override
+    protected void endGame() {
+
+    }
+
+    @Override
+    protected void openPair(Card card1, Card card2) {
+
+    }
+}
