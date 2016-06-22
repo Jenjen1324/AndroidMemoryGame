@@ -20,7 +20,7 @@ public class SinglePlayerGame extends Game {
     }
 
     @Override
-    protected void openPair(Card card1, Card card2) {
+    protected void openPair(DeckCard card1, DeckCard card2) {
 
     }
 }

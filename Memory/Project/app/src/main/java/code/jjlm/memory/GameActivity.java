@@ -11,6 +11,10 @@ import android.widget.GridView;
 import android.widget.ImageButton;
 import android.widget.ImageView;
 
+import code.jjlm.memory.game.Game;
+import code.jjlm.memory.game.Set;
+import code.jjlm.memory.game.SinglePlayerGame;
+
 public class GameActivity extends AppCompatActivity {
 
     @Override
@@ -19,10 +23,23 @@ public class GameActivity extends AppCompatActivity {
         setContentView(R.layout.activity_game);
 
         int image = R.drawable.doge;
-
+        int cols = 6;
+        int padding = 8;
         GridView grid = (GridView) findViewById(R.id.gridview);
 
-        grid.setAdapter(new GridViewAdapter(this));
+        int displayWidth = getResources().getDisplayMetrics().widthPixels - grid.getPaddingLeft() - grid.getPaddingRight();
+        int imageWidth = displayWidth / cols - (padding*2);
+        grid.setNumColumns(cols);
+        grid.setColumnWidth(imageWidth + padding*2);
+        grid.setVerticalSpacing(padding*2);
+        grid.setStretchMode(GridView.NO_STRETCH);
+
+        GridViewAdapter adapter = new GridViewAdapter(this, imageWidth, new SinglePlayerGame(new Set("", false)));
+        grid.setAdapter(adapter);
+
+
+
+        //grid.addView(adapter.getView(1,null,null));
 
 
         Button btn_exit = (Button) findViewById(R.id.button_exit);

@@ -11,7 +11,7 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(final Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_mainmenu);
 
         Button btn_sp = (Button) findViewById(R.id.button_sp);
         Button btn_mp = (Button) findViewById(R.id.button_mp);
@@ -21,7 +21,6 @@ public class MainActivity extends AppCompatActivity {
 
         btn_sp.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
-                System.out.println("You you clicked a button");
 
                 Intent intent = new Intent(getApplicationContext(), GameActivity.class);
                 startActivity(intent);

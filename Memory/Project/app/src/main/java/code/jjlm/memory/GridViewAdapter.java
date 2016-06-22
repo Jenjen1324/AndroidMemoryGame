@@ -10,6 +10,10 @@ import android.widget.ImageView;
 import java.lang.reflect.Array;
 import java.util.ArrayList;
 
+import code.jjlm.memory.game.Card;
+import code.jjlm.memory.game.Game;
+import code.jjlm.memory.game.Set;
+
 /**
  * Created by Jens on 21.06.2016.
  */
@@ -17,18 +21,37 @@ public class GridViewAdapter extends BaseAdapter {
 
     private ArrayList<ImageView> images;
     private Context context;
+    private Game game;
 
-    public GridViewAdapter(Context context) {
+    public GridViewAdapter(Context context, int imageWidth, Game game) {
         this.context = context;
+        this.game = game;
+        final Game g = game;
         images = new ArrayList<ImageView>();
         int image = R.drawable.doge;
 
-        for (int i = 0; i < 10; i++) {
+        for(final Game.DeckCard c : game.getDeckCards()) {
+            ImageView img = new ImageView(context);
+            img.setImageResource(image);
+            img.setLayoutParams(new GridView.LayoutParams(imageWidth,imageWidth));
+            img.setScaleType(ImageView.ScaleType.CENTER_CROP);
+            images.add(img);
+            img.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    g.openCard(c);
+                }
+            });
+        }
+
+        for (int i = 0; i < 30; i++) {
 
             ImageView img = new ImageView(context);
             img.setImageResource(image);
-            img.setLayoutParams(new GridView.LayoutParams(100,100));
+            img.setLayoutParams(new GridView.LayoutParams(imageWidth,imageWidth));
             img.setScaleType(ImageView.ScaleType.CENTER_CROP);
+
+            images.add(img);
         }
     }
 
@@ -39,12 +62,12 @@ public class GridViewAdapter extends BaseAdapter {
 
     @Override
     public Object getItem(int position) {
-        return null;
+        return images.get(position);
     }
 
     @Override
     public long getItemId(int position) {
-        return 0;
+        return position;
     }
 
     @Override
