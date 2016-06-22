@@ -7,9 +7,8 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
-    tools:context="code.jjlm.memory.GameActivity"
     android:label="Test"
-    android:parentActivityName="code.jjlm.memory.MainActivity">
+    android:padding="0dp">
 
     <Button
         android:layout_width="wrap_content"
@@ -26,8 +25,7 @@
         android:textAppearance="?android:attr/textAppearanceLarge"
         android:text="00:00:00"
         android:id="@+id/textView"
-        android:layout_marginTop="124dp"
-        android:layout_alignParentTop="true"
+        android:layout_below="@+id/textView2"
         android:layout_centerHorizontal="true" />
 
     <TextView
@@ -36,24 +34,22 @@
         android:textAppearance="?android:attr/textAppearanceMedium"
         android:text="Highscore: "
         android:id="@+id/textView2"
-        android:layout_marginTop="29dp"
-        android:layout_marginEnd="22dp"
         android:layout_alignParentTop="true"
-        android:layout_alignParentEnd="true" />
+        android:layout_alignParentStart="true"
+        android:layout_margin="10dp" />
 
     <GridView
         android:id="@+id/gridview"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:columnWidth="90dp"
-        android:numColumns="auto_fit"
-        android:verticalSpacing="10dp"
-        android:horizontalSpacing="10dp"
+        android:paddingLeft="5dp"
+        android:paddingRight="5dp"
         android:stretchMode="columnWidth"
+        android:numColumns="auto_fit"
         android:gravity="center"
-
         android:layout_below="@+id/textView"
-        android:layout_above="@+id/button_exit">
+        android:layout_above="@+id/button_exit"
+        android:layout_alignParentStart="true">
     </GridView>
 
 </RelativeLayout>
