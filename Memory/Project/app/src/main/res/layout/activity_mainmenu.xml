@@ -53,19 +53,18 @@
         android:layout_marginTop="78dp"
         android:minHeight="100dp"
         android:minWidth="250dp"
-        android:textSize="100dp"
+        android:textSize="80dp"
         />
 
     <ImageButton
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/imageButton"
+        android:id="@+id/image_sound"
         android:layout_alignParentTop="true"
         android:layout_alignParentRight="true"
         android:layout_alignParentEnd="true"
         android:src="@android:drawable/ic_lock_silent_mode_off"
-        android:layout_toEndOf="@+id/button_sp"
+        android:layout_toEndOf="@+id/text_title"
         android:layout_marginBottom="130dp"
-        android:layout_alignBottom="@+id/text_title"
-        android:layout_toRightOf="@+id/button_sp" />
+        android:layout_alignBottom="@+id/text_title" />
 </RelativeLayout>
