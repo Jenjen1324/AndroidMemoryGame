@@ -23,4 +23,9 @@ public class SinglePlayerGame extends Game {
     protected void openPair(DeckCard card1, DeckCard card2) {
 
     }
+
+    @Override
+    protected void pairFound(DeckCard card1, DeckCard card2) {
+
+    }
 }

@@ -1,5 +1,7 @@
 package code.jjlm.memory.game;
 
+import android.widget.ImageView;
+
 import java.util.ArrayList;
 
 /**
@@ -44,13 +46,33 @@ public abstract class Game {
             gameState = 0;
         }
     }
-    protected abstract void openPair(DeckCard card1, DeckCard card2);
+    protected void openPair(DeckCard card1, DeckCard card2) {
+        if(card1.card == card2.card) {
+
+        }
+    }
+
+    protected abstract void pairFound(DeckCard card1, DeckCard card2);
+
+    protected boolean isMatch(DeckCard card1, DeckCard card2) {
+        return card1.card == card2.card;
+    }
 
     public class DeckCard {
         private Card card;
+        private ImageView img;
         public boolean state = false;
+        public boolean isFound = false;
         public DeckCard(Card card) {
             this.card = card;
+        }
+
+        public ImageView getView() {
+            return img;
+        }
+
+        public void setView(ImageView view) {
+            this.img = view;
         }
     }
 
