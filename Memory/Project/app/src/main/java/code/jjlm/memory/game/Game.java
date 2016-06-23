@@ -58,7 +58,8 @@ public abstract class Game {
     public void openCard(DeckCard card) {
         if(!card.state && !card.isFound && gameState != 2) {
 
-
+            MediaPlayer mp = MediaPlayer.create(activity, R.raw.c);
+            mp.start();
 
 
             gameState++;
@@ -88,7 +89,7 @@ public abstract class Game {
         if(card1.card == card2.card) {
             pairFound(card1, card2);
             gameState = 0;
-            //playSound(MainActivity.player2);
+            MediaPlayer.create(activity, R.raw.c).start();
         } else {
             //playSound(MainActivity.player1);
             final Handler handler = new Handler();
