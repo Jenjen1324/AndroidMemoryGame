@@ -61,10 +61,6 @@
         android:layout_height="wrap_content"
         android:id="@+id/image_sound"
         android:layout_alignParentTop="true"
-        android:layout_alignParentRight="true"
-        android:layout_alignParentEnd="true"
-        android:src="@android:drawable/ic_lock_silent_mode_off"
-        android:layout_toEndOf="@+id/text_title"
-        android:layout_marginBottom="130dp"
-        android:layout_alignBottom="@+id/text_title" />
+        android:layout_alignParentEnd="true" />
+
 </RelativeLayout>

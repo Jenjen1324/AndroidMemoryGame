@@ -12,6 +12,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageButton;
+import android.widget.ImageView;
 import android.widget.Toast;
 
 import code.jjlm.memory.game.Card;
@@ -80,6 +81,8 @@ public class MainActivity extends AppCompatActivity {
 
             }
         });
+        ImageView img = (ImageView) findViewById(R.id.image_sound);
+        img.setImageResource(R.drawable.unmute);
 
         btn_snd.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -88,8 +91,12 @@ public class MainActivity extends AppCompatActivity {
 
                 if(sound) { // @android:drawable/ic_lock_silent_mode_off
                     // TODO: Set unmuted
+                    ImageView img = (ImageView) findViewById(R.id.image_sound);
+                    img.setImageResource(R.drawable.unmute);
                 } else {
                     // TODO: Set muted
+                    ImageView img = (ImageView) findViewById(R.id.image_sound);
+                    img.setImageResource(R.drawable.mute);
                 }
             }
         });
