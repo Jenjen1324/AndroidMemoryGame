@@ -32,7 +32,7 @@ public class ActivitySPEndscreen extends AppCompatActivity {
 
         //MainActivity.player3.start();
 
-        if(time < highscore) {
+        if(time < highscore || highscore == 0) {
             SharedPreferences.Editor edit = prefs.edit();
             edit.putLong("highscore", time);
             edit.commit();
