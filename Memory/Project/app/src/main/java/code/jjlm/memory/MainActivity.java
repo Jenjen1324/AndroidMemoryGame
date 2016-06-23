@@ -81,6 +81,7 @@ public class MainActivity extends AppCompatActivity {
 
             }
         });
+        //show sound icon by default
         ImageView img = (ImageView) findViewById(R.id.image_sound);
         img.setImageResource(R.drawable.unmute);
 
