@@ -45,7 +45,7 @@ public class GameActivity extends AppCompatActivity {
             }
         });
 
-        debug();
+        //debug(); only for test purpose
     }
 
 
@@ -64,7 +64,7 @@ public class GameActivity extends AppCompatActivity {
         GridViewAdapter adapter = new GridViewAdapter(this, imageWidth,g);
         grid.setAdapter(adapter);
     }
-
+    /*
     private void debug() {
         Button btn_endgame = (Button) findViewById(R.id.dgb_endgame);
         btn_endgame.setOnClickListener(new View.OnClickListener() {
@@ -74,4 +74,5 @@ public class GameActivity extends AppCompatActivity {
             }
         });
     }
+    */
 }
