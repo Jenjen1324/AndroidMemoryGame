@@ -24,6 +24,9 @@
             </intent-filter>
         </activity>
         <activity android:name=".GameActivity" />
+        <activity android:name=".ActivitySPEndscreen"/>
+        <activity android:name=".ActivityMPEndscreen"/>
+        <activity android:name=".ActivityChooseSet"/>
         <activity android:name=".testactivity"></activity>
 
         <provider

@@ -32,7 +32,7 @@
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Sets"
+        android:text="Clear Highscore"
         android:id="@+id/button_sets"
         android:layout_below="@+id/button_mp"
         android:layout_centerHorizontal="true"

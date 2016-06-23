@@ -7,13 +7,13 @@ import android.media.Image;
  */
 public class Card {
 
-    private Image image;
+    private int image;
 
-    public Card(Image image) {
+    public Card(int image) {
         this.image = image;
     }
 
-    public Image getImage() {
+    public int getImage() {
         return image;
     }
 

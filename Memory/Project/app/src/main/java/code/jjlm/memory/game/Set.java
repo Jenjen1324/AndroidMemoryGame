@@ -1,11 +1,12 @@
 package code.jjlm.memory.game;
 
+import java.io.Serializable;
 import java.util.ArrayList;
 
 /**
  * Created by Jens on 21.06.2016.
  */
-public class Set {
+public class Set implements Serializable {
 
     private boolean defaultSet = false;
     private String name;

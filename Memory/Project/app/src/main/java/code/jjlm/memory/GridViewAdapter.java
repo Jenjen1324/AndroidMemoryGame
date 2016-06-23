@@ -28,7 +28,7 @@ public class GridViewAdapter extends BaseAdapter {
         this.game = game;
         final Game g = game;
         images = new ArrayList<ImageView>();
-        int image = R.drawable.doge;
+        int image = R.drawable.back;
 
         for(final Game.DeckCard c : game.getDeckCards()) {
             ImageView img = new ImageView(context);
@@ -36,6 +36,7 @@ public class GridViewAdapter extends BaseAdapter {
             img.setLayoutParams(new GridView.LayoutParams(imageWidth,imageWidth));
             img.setScaleType(ImageView.ScaleType.CENTER_CROP);
             images.add(img);
+            c.setView(img);
             img.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
@@ -44,7 +45,7 @@ public class GridViewAdapter extends BaseAdapter {
             });
         }
 
-        for (int i = 0; i < 30; i++) {
+        /*for (int i = 0; i < 30; i++) {
 
             ImageView img = new ImageView(context);
             img.setImageResource(image);
@@ -52,7 +53,7 @@ public class GridViewAdapter extends BaseAdapter {
             img.setScaleType(ImageView.ScaleType.CENTER_CROP);
 
             images.add(img);
-        }
+        }*/
     }
 
     @Override

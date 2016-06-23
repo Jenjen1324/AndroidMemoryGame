@@ -3,4 +3,9 @@
     <color name="colorPrimary">#3F51B5</color>
     <color name="colorPrimaryDark">#303F9F</color>
     <color name="colorAccent">#FF4081</color>
+
+    <color name="player1">#CFF3FF</color>
+    <color name="player1_active">#7CD5F2</color>
+    <color name="player2">#FFBABA</color>
+    <color name="player2_active">#FF5757</color>
 </resources>
