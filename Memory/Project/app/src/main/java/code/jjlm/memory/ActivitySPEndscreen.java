@@ -30,7 +30,7 @@ public class ActivitySPEndscreen extends AppCompatActivity {
         SharedPreferences prefs = getSharedPreferences("game", Context.MODE_PRIVATE);
         long highscore = prefs.getLong("highscore", 0);
 
-        //MainActivity.player3.start();
+        MainActivity.playSound(R.raw.a, this);
 
         if(time < highscore || highscore == 0) {
             SharedPreferences.Editor edit = prefs.edit();
