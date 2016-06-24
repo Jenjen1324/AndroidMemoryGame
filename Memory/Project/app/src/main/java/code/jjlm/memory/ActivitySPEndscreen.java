@@ -19,6 +19,8 @@ public class ActivitySPEndscreen extends AppCompatActivity {
         TextView view = (TextView) findViewById(R.id.text_time);
         TextView text = (TextView) findViewById(R.id.text_prevhs);
 
+        assert view != null;
+        assert text != null;
 
         long time = getIntent().getLongExtra("time", 0l);
         long fTime = time / 1000;
@@ -35,7 +37,7 @@ public class ActivitySPEndscreen extends AppCompatActivity {
         if(time < highscore || highscore == 0) {
             SharedPreferences.Editor edit = prefs.edit();
             edit.putLong("highscore", time);
-            edit.commit();
+            edit.apply();
 
             text.setText(getResources().getString(R.string.highscore_new));
 

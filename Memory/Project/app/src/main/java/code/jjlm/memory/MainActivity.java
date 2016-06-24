@@ -81,23 +81,17 @@ public class MainActivity extends AppCompatActivity {
 
             }
         });
-        //show sound icon by default
-        ImageView img = (ImageView) findViewById(R.id.image_sound);
-        img.setImageResource(R.drawable.unmute);
 
+        assert btn_snd != null;
         btn_snd.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 sound = !sound;
 
-                if(sound) { // @android:drawable/ic_lock_silent_mode_off
-                    // TODO: Set unmuted
-                    ImageView img = (ImageView) findViewById(R.id.image_sound);
-                    img.setImageResource(R.drawable.unmute);
+                if(sound) {
+                    btn_snd.setImageResource(R.drawable.unmute);
                 } else {
-                    // TODO: Set muted
-                    ImageView img = (ImageView) findViewById(R.id.image_sound);
-                    img.setImageResource(R.drawable.mute);
+                    btn_snd.setImageResource(R.drawable.mute);
                 }
             }
         });

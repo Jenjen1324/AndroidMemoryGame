@@ -20,12 +20,8 @@ import code.jjlm.memory.game.Set;
 public class GridViewAdapter extends BaseAdapter {
 
     private ArrayList<ImageView> images;
-    private Context context;
-    private Game game;
 
     public GridViewAdapter(Context context, int imageWidth, Game game) {
-        this.context = context;
-        this.game = game;
         final Game g = game;
         images = new ArrayList<ImageView>();
         int image = R.drawable.back;
@@ -44,16 +40,6 @@ public class GridViewAdapter extends BaseAdapter {
                 }
             });
         }
-
-        /*for (int i = 0; i < 30; i++) {
-
-            ImageView img = new ImageView(context);
-            img.setImageResource(image);
-            img.setLayoutParams(new GridView.LayoutParams(imageWidth,imageWidth));
-            img.setScaleType(ImageView.ScaleType.CENTER_CROP);
-
-            images.add(img);
-        }*/
     }
 
     @Override

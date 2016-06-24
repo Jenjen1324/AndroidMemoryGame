@@ -27,7 +27,6 @@
         <activity android:name=".ActivitySPEndscreen"/>
         <activity android:name=".ActivityMPEndscreen"/>
         <activity android:name=".ActivityChooseSet"/>
-        <activity android:name=".testactivity"></activity>
 
         <provider
             android:name="android.support.v4.content.FileProvider"

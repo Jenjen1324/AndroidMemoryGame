@@ -38,14 +38,13 @@ public class GameActivity extends AppCompatActivity {
 
 
         Button btn_exit = (Button) findViewById(R.id.button_exit);
+        assert btn_exit != null;
         btn_exit.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 finish();
             }
         });
-
-        //debug(); only for test purpose
     }
 
 
@@ -54,6 +53,7 @@ public class GameActivity extends AppCompatActivity {
         int padding = 8;
         GridView grid = (GridView) findViewById(R.id.gridview);
 
+        assert grid != null;
         int displayWidth = getResources().getDisplayMetrics().widthPixels - grid.getPaddingLeft() - grid.getPaddingRight();
         int imageWidth = displayWidth / cols - (padding*2);
         grid.setNumColumns(cols);
@@ -64,15 +64,4 @@ public class GameActivity extends AppCompatActivity {
         GridViewAdapter adapter = new GridViewAdapter(this, imageWidth,g);
         grid.setAdapter(adapter);
     }
-    /*
-    private void debug() {
-        Button btn_endgame = (Button) findViewById(R.id.dgb_endgame);
-        btn_endgame.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                game.endGame();
-            }
-        });
-    }
-    */
 }

@@ -63,6 +63,7 @@
         android:id="@+id/image_sound"
         android:layout_alignParentTop="true"
         android:layout_alignParentEnd="true"
-        android:background="#ffffff" />
+        android:background="#ffffff"
+        android:src="@drawable/unmute" />
 
 </RelativeLayout>
